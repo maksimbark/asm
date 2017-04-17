@@ -89,20 +89,13 @@ int main() {
         for (l = 0; l < 15; l++) {
             auto time = clock();
 
-            if (i % 2 != 0) { //на случай изменения входных данных
-                for (m = 0; m <= i / 2; m++) {
-                    now = arr[m];
-                    now = arr[i - 1 - m];
-                }
-            } else {
                 for (m = 0; m < i / 2; m++) {
                     now = arr[m];
                     now = arr[i - 1 - m];
                 }
                 now = arr[i / 2];
-            }
             megaSum += double((clock() - time)) / double(i);
-        }
+            }
         megaSum = megaSum / 15.0;
 
         cout << i << " " << megaSum << endl;
