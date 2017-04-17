@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/maksimbarkalov/Documents/C_Projects/CacheLab/main.cpp" "/Users/maksimbarkalov/Documents/C_Projects/CacheLab/cmake-build-debug/CMakeFiles/CacheLab.dir/main.cpp.o"
+  "/Users/maksimbarkalov/Documents/C_Projects/asm/CacheLab/main.cpp" "/Users/maksimbarkalov/Documents/C_Projects/asm/CacheLab/cmake-build-debug/CMakeFiles/CacheLab.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

@@ -3,7 +3,8 @@
 using namespace std;
 
 int main() {
-    int m;
+    double megaSum;
+    int m, l;
     int now;
     //прогон
     for (int i = 6000; i <= 1050000; i += 1000) {
@@ -25,11 +26,16 @@ int main() {
     ofstream cout("outLeftToRight.txt");
     for (int i = 6000; i <= 1050000; i += 1000) {
         vector<int> arr(i);
-        auto time = clock();
-        for (m = 0; m < i; m++) {
-            now = arr[m];
+        megaSum = 0;
+        for (l = 0; l < 15; l++) {
+            auto time = clock();
+            for (m = 0; m < i; m++) {
+                now = arr[m];
+            }
+            megaSum += double((clock() - time)) / double(i);
         }
-        cout << i << " " << double((clock() - time)) / double(i) << endl;
+        megaSum = megaSum / 15.0;
+        cout << i << " " << megaSum << endl;
         arr.clear();
 
     }
@@ -50,11 +56,16 @@ int main() {
 
     for (int i = 6000; i <= 1050000; i += 1000) {
         vector<int> arr(i);
-        auto time = clock();
-        for (m = i - 1; m >= 0; m--) {
-            now = arr[m];
+        megaSum = 0;
+        for (l = 0; l < 15; l++) {
+            auto time = clock();
+            for (m = i - 1; m >= 0; m--) {
+                now = arr[m];
+            }
+            megaSum += double((clock() - time)) / double(i);
         }
-        cout << i << " " << double((clock() - time)) / double(i) << endl;
+        megaSum = megaSum / 15.0;
+        cout << i << " " << megaSum << endl;
         arr.clear();
 
     }
@@ -74,21 +85,27 @@ int main() {
 
     for (int i = 6000; i <= 1050000; i += 1000) {
         vector<int> arr(i);
-        auto time = clock();
-        if (i % 2 != 0) { //на случай изменения входных данных
-            for (m = 0; m <= i / 2; m++) {
-                now = arr[m];
-                now = arr[i - 1 - m];
-            }
-        } else {
-            for (m = 0; m < i / 2; m++) {
-                now = arr[m];
-                now = arr[i - 1 - m];
-            }
-            now = arr[i/2];
-        }
+        megaSum = 0;
+        for (l = 0; l < 15; l++) {
+            auto time = clock();
 
-        cout << i << " " << double((clock() - time)) / double(i) << endl;
+            if (i % 2 != 0) { //на случай изменения входных данных
+                for (m = 0; m <= i / 2; m++) {
+                    now = arr[m];
+                    now = arr[i - 1 - m];
+                }
+            } else {
+                for (m = 0; m < i / 2; m++) {
+                    now = arr[m];
+                    now = arr[i - 1 - m];
+                }
+                now = arr[i / 2];
+            }
+            megaSum += double((clock() - time)) / double(i);
+        }
+        megaSum = megaSum / 15.0;
+
+        cout << i << " " << megaSum << endl;
         arr.clear();
 
     }

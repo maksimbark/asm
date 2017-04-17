@@ -1,4 +1,4 @@
-# Install script for directory: /Users/maksimbarkalov/Documents/C_Projects/CacheLab
+# Install script for directory: /Users/maksimbarkalov/Documents/C_Projects/asm/CacheLab
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/maksimbarkalov/Documents/C_Projects/CacheLab/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/maksimbarkalov/Documents/C_Projects/asm/CacheLab/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
